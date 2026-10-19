@@ -1,0 +1,13 @@
+displayName: API Key Auth (Firecrawl)
+type: middleware
+import: github.com/firecrawl/traefik-api-key-auth
+basePkg: apikeyauth
+
+summary: Lets requests through only when a header carries one of your API keys. Supports schemes such as Bearer, hashed keys, key rotation, path and method exclusions and custom rejection responses.
+
+testData:
+  headerName: X-API-Key
+  keys:
+    - example-key
+  excludedPaths:
+    - /health
